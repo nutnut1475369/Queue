@@ -33,7 +33,7 @@ void enqueue(Queue *q,int ord,int qty){
 int  dequeue(Queue *q){
     if (q->size==0)
     {
-        printf("Not have any queue left.");
+        printf("Not have any queue left.\n");
         return 0;
     }
     order *t=q->head;

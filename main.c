@@ -10,6 +10,11 @@ int main(int argc, const char * argv[]) {
     Q.size=0;
     printf("1.Ramen 120\n2.Sushi 60\n3.Water 5\n");
     for(i=1;i<argc;i++){
+        if(atoi(argv[i])!=1 && atoi(argv[i])!=2 && atoi(argv[i])!=3 && strcmp(argv[i],"x")!=0){
+          printf("Not have order\n");
+          i++;
+          continue;
+        }
         if(strcmp(argv[i],"x")==0){
           x=dequeue(&Q);
           if(x!=0){
